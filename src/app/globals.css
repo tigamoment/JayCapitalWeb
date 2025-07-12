@@ -1,10 +1,15 @@
-
+/* ====== Global Reset & Box Sizing ====== */
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* ====== Header & Footer ====== */
 header,
 footer {
   /* background-color: #333; */
@@ -13,51 +18,90 @@ footer {
   padding: 1rem;
 }
 
+/* ====== Scroll Behavior ====== */
 html {
   scroll-behavior: smooth;
 }
 
+/* ====== Responsive Media Elements ====== */
 img, video {
   max-width: 100%;
   height: auto;
   object-fit: cover;
 }
-/* Home.modul.css */
-@media (max-width: 768px) { /* Tablet styles */
+
+
+/* ====== Home.module.css Responsive Text Size ====== */
+@media (max-width: 768px) { /* Tablet */
   .rotating-word {
     font-size: 24px;
   }
 }
 
-@media (max-width: 480px) { /* Mobile styles */
+@media (max-width: 480px) { /* Mobile */
   .rotating-word {
     font-size: 18px;
   }
+
   .content_financial {
     flex-direction: column;
   }
 }
 
-/* Container style */
-
-
+/* ====== Flex Container Item Width ====== */
 .item {
-  flex: 1 1 calc(33.33% - 16px); /* Three items per row */
+  flex: 1 1 calc(33.33% - 16px); /* 3 items per row */
 }
 
 @media (max-width: 768px) {
   .item {
-    flex: 1 1 calc(50% - 16px); /* Two items per row */
+    flex: 1 1 calc(50% - 16px); /* 2 items per row */
   }
 }
 
 @media (max-width: 480px) {
   .item {
-    flex: 1 1 100%; /* Full-width items */
+    flex: 1 1 100%; /* full width */
   }
 }
 
-/* Dynamic Sizing */
+/* ====== Dynamic Heading Size ====== */
 h1 {
-  font-size: clamp(1.5rem, 4vw, 2.5rem); /* Min: 1.5rem, Max: 2.5rem */
+  font-size: clamp(1.5rem, 4vw, 2.5rem); /* min 1.5rem, max 2.5rem */
+}
+
+/* ====== Additional Global Responsive Improvements ====== */
+
+/* Body font size scaling */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 12px;
+  }
+}
+
+/* Container padding for small devices */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+}
+
+/* Utility: Make all buttons full width on mobile */
+@media (max-width: 480px) {
+  button {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
