@@ -4,10 +4,10 @@ import "../assets/styles/About.css";
 
 export default function AboutPage() {
   return (
-    <div class="container">
-      <div class="container_header">
-        <div class="group_left_header">
-          <div class="group_left">
+    <div className="container">
+      <div className="container_header">
+        <div className="group_left_header">
+          <div className="group_left">
             <button> About Us</button>
             <p>
               WE ARE TRUSTED ADVISORS <br />
@@ -15,8 +15,8 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div class="group_right">
-            <div class="text">
+          <div className="group_right">
+            <div className="text">
               <p>
                 Jay Capital Advisory Limited <br /> is a{" "}
                 <span>SEC-approved </span> boutique <br /> financial advisory
