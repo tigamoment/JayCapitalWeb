@@ -67,29 +67,29 @@ export default function Header() {
   
   const items = [
     { label: 'Home', key: 'home', path: '/' },
-    { label: 'Track Records', key: 'trackrecord', path: '/Page/Trackrecords' },
-    { label: 'Our Team', key: 'ourteam', path: '/Page/OurTeam' },
-    { label: 'Business Reorientation', key: 'businessRT', path: '/Page/BusinessReorientation' },
-    { label: 'Financial Solutions', key: 'finacialSolutions', path: '/Page/FinacialSolutions' },
-    { label: 'Strategic Solutions', key: 'strategicSolutions', path: '/Page/StrategicSolutions' },
-    { label: 'Contact Us', key: 'contactus', path: '/Page/Contactus' },
-    { label: 'Knowledge', key: 'knowledge', path: '/Page/Knowledge' },
-    { key: 'getintouch'},
-    {
-      label: (
-        <>
-          Service {modeMobile ? '' : openSubMenu ? <DownOutlined style={{ fontSize: '10px' }} /> : <RightOutlined style={{ fontSize: '10px' }} />}
-        </>
-      ),
-      key: 'service',
-      children: [
-        { label: 'Knowledge', key: 'knowledge' },
-        { label: 'Our Team', key: 'ourteam' },
-        { label: 'Business Reorientation', key: 'businessRT' },
-        { label: 'Strategic Solutions', key: 'strategicSolutions' },
-        { label: 'Financial Solutions', key: 'finacialSolutions' },
-      ],
-    },
+    // { label: 'Track Records', key: 'trackrecord', path: '/Page/Trackrecords' },
+    // { label: 'Our Team', key: 'ourteam', path: '/Page/OurTeam' },
+    // { label: 'Business Reorientation', key: 'businessRT', path: '/Page/BusinessReorientation' },
+    // { label: 'Financial Solutions', key: 'finacialSolutions', path: '/Page/FinacialSolutions' },
+    // { label: 'Strategic Solutions', key: 'strategicSolutions', path: '/Page/StrategicSolutions' },
+    // { label: 'Contact Us', key: 'contactus', path: '/Page/Contactus' },
+    // { label: 'Knowledge', key: 'knowledge', path: '/Page/Knowledge' },
+    // { key: 'getintouch'},
+    // {
+    //   label: (
+    //     <>
+    //       Service {modeMobile ? '' : openSubMenu ? <DownOutlined style={{ fontSize: '10px' }} /> : <RightOutlined style={{ fontSize: '10px' }} />}
+    //     </>
+    //   ),
+    //   key: 'service',
+    //   children: [
+    //     { label: 'Knowledge', key: 'knowledge' },
+    //     { label: 'Our Team', key: 'ourteam' },
+    //     { label: 'Business Reorientation', key: 'businessRT' },
+    //     { label: 'Strategic Solutions', key: 'strategicSolutions' },
+    //     { label: 'Financial Solutions', key: 'finacialSolutions' },
+    //   ],
+    // },
   ];
   
 
@@ -150,7 +150,7 @@ export default function Header() {
       >
         <Layout className="sticky-header">
           <Header className={isSticky ? 'sticky' : 'not-sticky'}>
-            <div class="demo-logo">
+            <div className="demo-logo">
               <img
                 src={Image_logo.src}
                 alt="Logo"
@@ -167,7 +167,6 @@ export default function Header() {
               className="custom-menu"
               selectedKeys={[current]}
               style={{
-                
                 flex: 1,
                 fontSize: "16px",
                 minWidth: 0,
@@ -176,33 +175,33 @@ export default function Header() {
                 border: "none",
                 display: modeMobile ? "none" : "flex",
                 fontWeight: 400,
-                justifyContent: "space-around",
+                justifyContent: "end",
                 padding: 0,
               }}
             >
-              <Menu.Item theme="light" key="home">
+              {/* <Menu.Item theme="light" key="home">
                 Home
-              </Menu.Item>
+              </Menu.Item> */}
 
-              <Menu.SubMenu 
+              {/* <Menu.SubMenu 
                 key="service"
                 title={(
                   <>
                     Service {modeMobile ? '' : openSubMenu ? <DownOutlined style={{ fontSize: '10px' }} /> : <RightOutlined style={{ fontSize: '10px' }} />}
                   </>
                 )}
-              >
-                <Menu.Item key="knowledge" selectedKeys={[current]}>Knowledge Sharing</Menu.Item>
+              > */}
+                {/* <Menu.Item key="knowledge" selectedKeys={[current]}>Knowledge Sharing</Menu.Item> */}
                 {/* <Menu.Item key="ourteam"selectedKeys={[current]}>Our Team</Menu.Item> */}
-                <Menu.Item key="businessRT"selectedKeys={[current]}>Business Reorientation</Menu.Item>
+                {/* <Menu.Item key="businessRT"selectedKeys={[current]}>Business Reorientation</Menu.Item>
                 <Menu.Item key="strategicSolutions"selectedKeys={[current]}>Strategic Solutions</Menu.Item>
                 <Menu.Item key="finacialSolutions"selectedKeys={[current]}>Finacial Solutions</Menu.Item>
 
-              </Menu.SubMenu>
+              </Menu.SubMenu> */}
 
-              <Menu.Item key="trackrecord">
+              {/* <Menu.Item key="trackrecord">
                 Track Records
-              </Menu.Item>
+              </Menu.Item> */}
               {/* <Menu.Item key="ourteam">
                 ourTeam
               </Menu.Item> */}
@@ -221,6 +220,7 @@ export default function Header() {
                     color: "black",
                     fontWeight: "500",
                     borderRadius: "50px",
+                    
                   }}
                   onMouseEnter={(e) => e.target.style.color = "black"}
                   onMouseLeave={(e) => e.target.style.color = "black"}
